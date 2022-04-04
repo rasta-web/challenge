@@ -10,6 +10,8 @@ public class Introduccion {
 		for(int i = 0; i < 3; i++) {
 			System.out.println("Coloque un numero:");
 			numeros[i] = leer.nextInt();
+			if(i == 0)
+				mayor = numeros[i];
 			if(numeros[i] > mayor)
 				mayor = numeros[i];
 		}
