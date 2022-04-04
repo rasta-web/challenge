@@ -1,0 +1,48 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Introduccion {
+
+	public static void main(String[] args) {
+		int[] lados = new int[3];
+		Scanner leer = new Scanner(System.in);
+		
+		for(int i = 0; i < 3; i++) {
+			System.out.println("Colocar lados del triangulo: ");
+			lados[i] = leer.nextInt();
+		}
+		
+		
+		Triangulos triangulo1 = new Triangulos(lados[0], lados[1], lados[2]);
+		
+		System.out.println(triangulo1.tipos());
+		
+		
+		
+			
+
+	}
+
+}
+
+public class Triangulos {
+	private int lado1;
+	private int lado2;
+	private int lado3;
+	
+	public Triangulos(int lado1, int lado2, int lado3) {
+		this.lado1 = lado1;
+		this.lado2 = lado2;
+		this.lado3 = lado3;
+	}
+	
+	public String tipos() {
+		if((this.lado1 == this.lado2) && (this.lado1 == this.lado3))
+			return "equilatero";
+		
+		else if(((this.lado1 == this.lado2) && (this.lado3 != this.lado1)) || ((this.lado2 == this.lado3) && (this.lado1 != this.lado2)) || ((this.lado1 == this.lado3) && (this.lado2 != lado1)))
+			return "isosceles";
+		
+		else return "escaleno";
+	}
+}
