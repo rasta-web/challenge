@@ -1,0 +1,72 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Introduccion {
+
+	public static void main(String[] args) {
+		
+		int array[] = new int[10];
+		Scanner leer = new Scanner(System.in);
+		int mayor = 0;
+		int menor = 0;
+		int aux = 0;
+		
+		for(int i = 0; i < 10; i++) {
+			System.out.println("Coloque un numero: ");
+			array[i] = leer.nextInt();
+			
+			if(i == 0) {
+				mayor = array[i];
+				menor = array[i];
+			}
+			
+			if(array[i] > mayor)
+				mayor = array[i];
+			
+			if(array[i] < menor)
+				menor = array[i];
+					
+		}
+		
+		System.out.println("El numero mayor es: "+mayor);
+		System.out.println("El numero menor es: "+menor);
+		System.out.println("Sus numeros son: ");
+		
+		for(int i = 0; i < 10; i++) {			
+			if(array[i] % 2 == 0)
+				System.out.println("Par: "+array[i]);
+			else
+				System.out.println("Impar: "+array[i]);
+			
+		}
+		
+		for(int i = 0; i < 10; i++){ //metodo burbuja para ordenar el array
+			
+			for(int j = 0; j < 9; j++){ 
+				
+				if(array[j] > array[j+1]){ 
+					
+					aux = array[j+1]; 
+					array[j+1] = array[j]; 
+					array[j] = aux; 
+				}
+			}
+		}
+		
+		System.out.println("Orden ascendente");
+		
+		for(int i = 0; i < 10; i++) {
+			System.out.println(array[i]);
+		}
+		
+		System.out.println("Orden descendente");
+		
+		for(int i = 9; i >= 0; i--) {
+			System.out.println(array[i]);
+		}
+		
+		
+	
+	}	
+
+}
