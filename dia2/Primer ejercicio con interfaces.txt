@@ -1,0 +1,52 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Introduccion {
+
+	public static void main(String[] args) {
+		
+		Perro tobi = new Perro();
+		
+		Pajaro paloma = new Pajaro();
+		
+		tobi.comunicarse();
+		paloma.comunicarse();
+		
+		tobi.trasladarse();
+		paloma.trasladarse();
+	}
+}
+
+public interface acciones {
+	
+	public void trasladarse();
+	
+	public void comunicarse();
+}
+
+public class Perro implements acciones{
+	
+	private String raza;
+	private String color;
+	
+	public void trasladarse() {
+		System.out.println("Caminar o correr");
+	}
+	
+	public void comunicarse() {
+		System.out.println("ladrar");
+	}
+}
+
+public class Pajaro implements acciones{
+	
+	public void trasladarse() {
+		System.out.println("Volar o caminar");
+	}
+	
+	public void comunicarse() {
+		System.out.println("pio pio");
+	
+	}
+
+}
