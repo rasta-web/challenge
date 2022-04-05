@@ -1,0 +1,85 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Introduccion {
+
+	public static void main(String[] args) {
+		
+		Scanner leer = new Scanner(System.in);
+		boolean salir = false;
+		String opcion;
+		
+		while(!salir) {
+			System.out.println("---Calculadora---");
+			System.out.println("Que operacion desea realizar?");
+			System.out.println("a) - Sumar");
+			System.out.println("b) - Restar");
+			System.out.println("c) - Multiplicar");
+			System.out.println("d) - Dividir");
+			System.out.println("s) - Salir");
+			opcion = leer.next();
+			
+			switch(opcion) {
+			
+			case "a": suma();
+				break;
+			case "b": resta();
+				break;
+			case "c": multiplicacion();
+				break;
+			case "d": division();
+				break;
+			case "s": salir = true;
+				System.out.println("Fin del programa");
+				break;
+			
+			}
+			
+		}
+		
+		
+	}
+	
+	static void suma() {
+		int n1,n2;
+		Scanner leer = new Scanner(System.in);
+		System.out.println("Primer numero: ");
+		n1 = leer.nextInt();
+		System.out.println("Segundo numero: ");
+		n2 = leer.nextInt();
+		System.out.println("Resultado: "+(n1+n2)+"");
+	}
+	
+	static void resta() {
+		int n1,n2;
+		Scanner leer = new Scanner(System.in);
+		System.out.println("Primer numero: ");
+		n1 = leer.nextInt();
+		System.out.println("Segundo numero: ");
+		n2 = leer.nextInt();
+		System.out.println("Resultado: "+(n1-n2)+"");
+	}
+	
+	static void multiplicacion() {
+		int n1,n2;
+		Scanner leer = new Scanner(System.in);
+		System.out.println("Primer numero: ");
+		n1 = leer.nextInt();
+		System.out.println("Segundo numero: ");
+		n2 = leer.nextInt();
+		System.out.println("Resultado: "+(n1*n2)+"");
+	}
+	
+	static void division() {
+		int n1,n2;
+		Scanner leer = new Scanner(System.in);
+		System.out.println("Primer numero: ");
+		n1 = leer.nextInt();
+		System.out.println("Segundo numero: ");
+		n2 = leer.nextInt();
+		System.out.println("Resultado: "+(n1/n2)+"");
+	}
+	
+
+
+}
