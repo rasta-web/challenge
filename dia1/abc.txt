@@ -1,0 +1,8 @@
+pluggins vs code
+github suppor
+maven
+jdbc for java
+
+Para el segundo ejercicio: quiero ver si pueden hacer esto: que el usuario ponga un 
+número del 1 al 14, y dependiendo del número, te diga si ese número es primo o no, y 
+lo tienen que hacer con if, y después con switch
